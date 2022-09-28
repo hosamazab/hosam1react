@@ -14,7 +14,7 @@ function Navbar1() {
   let count2 = useSelector((state) => state.count.count);
 
   return (
-    <Navbar bg="light" expand="lg" fixed="top">
+    <Navbar bg="light" expand="lg" fixed="top" style={{height:'50px'}}>
       <Container>
         <Navbar.Brand href="#home"><i class="bi bi-h-circle-fill" style={{ fontSize: 40 }}></i></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
@@ -25,9 +25,9 @@ function Navbar1() {
             <NavLink to="cards" className={navClass}> CARDS </NavLink>
           </Nav>
         </Navbar.Collapse>
-        <div className='d-flex mx-5 gap-3 fs-3'>
+        {/* <div className='d-flex mx-5 gap-3 fs-3'>
           count of items {count2}
-        </div>
+        </div> */}
       </Container>
     </Navbar>
   );

@@ -1,24 +1,4 @@
-import { Example } from './Example.css'
-import axios from 'axios';
-import Card from "./Card";
-
-import React, { Component, useEffect, useState } from "react";
-export default function Examples() {
-  // useEffect(() => {
-
-  //   getcards();
-  // }, []);
-  // let getcards= async () => {
-
-
-  //   let card = await axios.get("https://animechan.vercel.app/api/quotes")
-
-  //   setCards(card.data)
-  // };
-  // let [Cards,setCards]=useState([])
-
-  let card =
-  [
+[
     { "anime": "Naruto","link1":"https://www.crunchyroll.com/ar/naruto-shippuden", "link2":"https://arabia.starzplay.com/ar/series/naruto/183330856326","img": "https://img1.ak.crunchyroll.com/i/spire4/5568ffb263f6bcba85a639980b80dd9a1612993223_full.jpg", "character": "naruto", "quote": "first site for naruto shippuden and the second for naruto childhood " },
     { "anime": "One Piece","link1":"https://witanime.com/anime/one-piece/", "link2":"https://shahed4u.vip/series/one-piece/", "img": "https://tv.egydead.live/wp-content/uploads/2021/11/%D8%A7%D9%86%D9%85%D9%8A-One-Piece-%D8%A7%D9%84%D8%AD%D9%84%D9%82%D8%A9-1000.jpg", "character": "luffy", "quote": "i'm going to be the king of pirates" },
     { "anime": "Bleach","link1":"https://www.crunchyroll.com/ar/bleach", "link2":"https://anime-time.co/?s=bleach", "img": "https://image.winudf.com/v2/image1/Y29tLnR0bGlrZS5tYnNhZW4uYW5kcm9pZF9zY3JlZW5fMF8xNjA4MDE4NDgzXzAwOQ/screen-0.jpg?fakeurl=1&type=.webp", "character": "itchigo", "quote": "bankai" },
@@ -32,19 +12,3 @@ export default function Examples() {
     { "anime": "Hunter X Hunter","link1":"https://anime-time.co/anime/%D8%A3%D9%86%D9%85%D9%8A-hunter-x-hunter-2011-%D9%85%D8%AA%D8%B1%D8%AC%D9%85-%D8%A7%D9%84%D9%85%D9%88%D8%B3%D9%85-%D8%A7%D9%84%D8%A3%D9%88%D9%84/", "link2":"https://shahed4u.vip/series/%D8%A7%D9%86%D9%85%D9%8A-hunter-x-hunter-%D9%85%D8%AA%D8%B1%D8%AC%D9%85-2/", "img": "https://m.media-amazon.com/images/M/MV5BNGM0YTk3MWEtN2JlZC00ZmZmLWIwMDktZTMxZGE5Zjc2MGExXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_FMjpg_UX1000_.jpg", "character": "Ging Freecss", "quote": "You should enjoy the little detours. To the fullest. Because that's where you'll find the things more important than what you want." },
     { "anime": "Plastic Memories","link1":"https://www.animeiat.tv/anime/plastic-memories", "link2":"https://www.egyanime.com/anime?do=1147", "img": "https://img1.ak.crunchyroll.com/i/spire2/ad2b0b48b9f93920299b014bd70f24ed1428100037_main.jpg", "character": "Isla", "quote": "Because nothing makes one happier than being with the one you love." }
   ]
-  return (
-
-    <div className="d-flex justify-content-center container py-5 gap-4 flex-wrap">
-      {
-        card.map((card, index) => <Card title={card.anime} id={card.character} quote={card.quote} img={card.img} key={index} />)
-
-      }
-
-    </div>
-
-
-  );
-
-}
-
-

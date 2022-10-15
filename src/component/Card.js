@@ -20,7 +20,7 @@ export default function Card1(props) {
     return `nav-link ${object.isActive && "text-white bg-primary"}`;
   };
  
-  let { title, quote,id,img } = props;
+  let { title, description, images, instock, price,id } = props;
    
   
   
@@ -29,25 +29,25 @@ export default function Card1(props) {
       <Card style={{ width: "18rem", backgroundColor:'gray' }}>
         <Card.Img
           variant="top"
-          style={{borderRadius:'50%' ,height:'270px',width:'270px',textAlign:'center',margin:'5px'}}
-          src={img}
+          style={{borderRadius:'50%' }}
+          src={props.images ? images : "https://api.lorem.space/image/watch?w=640&h=480&r=9918"}
         />
         <Card.Body>
-          <Card.Title style={{textAlign:'center'}}>{title}</Card.Title>
-          <Card.Text></Card.Text>
-          
+          <Card.Title>{title}</Card.Title>
+          <Card.Text>{description}</Card.Text>
+          <Card.Text>price : {price} $</Card.Text>
           
         </Card.Body>
         {props.children}
         
         {
             <NavLink to={`/info/${id}`} className={navClass} style={{margin:"15px"}}>
-              <Button style={{width:"150px",textAlign:'center',marginLeft:'50px'}} variant={id ? "primary" : "danger"} >
+              <Button style={{width:"150px",margin:"15px"}} variant={id ? "primary" : "danger"} >
               {/* <a style={{background:'primary', color:"black",textTransform:"capitalize"}} href= {`https://api.escuelajs.co/api/v1/products/${id}`}>  show card info</a> */}
-              Info</Button>
+              show card info</Button>
                </NavLink>
           }
-        {/* <button className="btn d-f px-3 bg-primary m-1" onClick={increase1}  >ADD ME</button> */}
+        <button className="btn d-f px-3 bg-primary m-1" onClick={increase1}  >ADD ME</button>
           
       </Card>
       
